@@ -1,40 +1,77 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+  <meta charset="utf-8">
+  <title>Quarterly Earnings Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Markdown Slide -->
+      <section data-markdown>
+        <textarea data-template>
+# 📊 Quarterly Earnings Report
+**Prepared by:** Technical Consultant  
+**Email:** 24f2004508@ds.study.iitm.ac.in
+        </textarea>
+      </section>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+      <!-- Animated Financial Highlights -->
+      <section>
+        <h2>📈 Financial Highlights</h2>
+        <ul>
+          <li class="fragment">Revenue: <strong>$12.5B</strong></li>
+          <li class="fragment">Net Income: <strong>$3.2B</strong></li>
+          <li class="fragment">EPS: <strong>$1.45</strong></li>
+        </ul>
+        <aside class="notes">
+          Emphasize the strong revenue growth and improved margins.
+        </aside>
+      </section>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+      <!-- Code Sample -->
+      <section>
+        <h2>💻 EPS Calculation Code</h2>
+        <pre><code class="language-python">
+def calculate_eps(net_income, shares_outstanding):
+    return net_income / shares_outstanding
+        </code></pre>
+        <aside class="notes">
+          This Python snippet shows how EPS is calculated programmatically.
+        </aside>
+      </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+      <!-- Math Formula -->
+      <section>
+        <h2>📐 Financial Formula</h2>
+        <p>
+          \[
+          \text{EPS} = \frac{\text{Net Income} - \text{Dividends}}{\text{Shares Outstanding}}
+          \]
+        </p>
+        <aside class="notes">
+          EPS is a key metric for evaluating profitability per share.
+        </aside>
+      </section>
+    </div>
+  </div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/math/math.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
+    });
+  </script>
+</body>
 </html>
